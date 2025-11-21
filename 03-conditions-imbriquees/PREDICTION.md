@@ -3,56 +3,65 @@
 ## Traçage ligne par ligne
 
 **Lignes 3-5 :** Initialisation des variables
-- age = ___
-- estEtudiant = ___
-- solde = ___
+
+- age = 25
+- estEtudiant = true
+- solde = 150
 
 **Ligne 7 :** Affichage
-```
 
+```
+Verification du profil...
 ```
 
 **Ligne 9 :** `if (age >= 18)`
-- Condition : ___ >= 18 → ___
-- Branche exécutée : ___ (if / else)
+
+- Condition : age >= 18 → vrai
+- Branche exécutée : if (if / else)
 
 **Ligne 10 :** (si exécuté)
-```
 
+```
+Majeur
 ```
 
 **Ligne 12 :** `if (estEtudiant)`
-- Condition : estEtudiant → ___
-- Branche exécutée : ___ (if / else)
+
+- Condition : estEtudiant → vrai
+- Branche exécutée : if (if / else)
 
 **Ligne 13 :** (si exécuté)
+
 ```
 
 ```
 
 **Ligne 15 :** `if (solde >= 100)`
-- Condition : ___ >= 100 → ___
-- Branche exécutée : ___ (if / else)
+
+- Condition : solde >= 100 → vrai
+- Branche exécutée : if (if / else)
 
 **Ligne 16 :** (si exécuté) `solde = solde - 50;`
-- Calcul : ___ - 50 = ___
-- État : solde = ___
+
+- Calcul : 150 - 50 = 100
+- État : solde = 100
 
 **Ligne 17 :** (si exécuté)
-```
 
+```
+Reduction etudiant appliquee
 ```
 
 **Ligne 29 :** Affichage final
-```
 
 ```
-
-
+Solde final : 100
+```
 
 ## Résumé du chemin d'exécution
 
 Quelles branches ont été prises ?
-- Premier if (age >= 18) : ___
-- Deuxième if (estEtudiant) : ___
-- Troisième if (solde >= 100) : ___
+
+- Premier if (age >= 18) : if
+- Deuxième if (estEtudiant) : if
+- Troisième if (solde >= 100) : if
