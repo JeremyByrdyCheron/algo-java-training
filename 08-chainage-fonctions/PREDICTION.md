@@ -6,11 +6,11 @@ Dessine la pile au fur et à mesure :
 
 ```
 Étape 1: [main]
-Étape 2: [main, a]
-Étape 3: [main, a, b]
-Étape 4: [main, a, b, c]
-Étape 5: [main, a, b]  ← retour de c
-Étape 6: [main, a]       ← retour de b
+Étape 2: [main, a(5)]
+Étape 3: [main, a(5), b(6)]
+Étape 4: [main, a(5), b(6), c(7)]
+Étape 5: [main, a(5), b(6)]  ← retour de c
+Étape 6: [main, a(5)]       ← retour de b
 Étape 7: [main]            ← retour de a
 ```
 
