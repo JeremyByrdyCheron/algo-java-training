@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        int[] nombres = {3, 7, 2, 8, 5};
+        int[] nombres = { 3, 7, 2, 8, 5 };
 
         // Test 1 : Trouver le maximum
         // Attendu : 8
@@ -18,7 +18,8 @@ public class Main {
         // Attendu : {3, 3, 7, 7, 2, 2, 8, 8, 5, 5}
         int[] duplique = dupliquer(nombres);
         System.out.print("Duplique : ");
-        for (int n : duplique) System.out.print(n + " ");
+        for (int n : duplique)
+            System.out.print(n + " ");
         System.out.println();
     }
 

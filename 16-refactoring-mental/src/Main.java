@@ -19,56 +19,28 @@ public class Main {
 
     // Version verbeuse - à simplifier
     public static boolean estPositif(int n) {
-        if (n > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return n > 0 ? true : false;
     }
 
     // Version verbeuse - à simplifier
     public static int valeurAbsolue(int n) {
-        if (n < 0) {
-            n = n * -1;
-            return n;
-        } else {
-            return n;
-        }
+        n = n < 0 ? n * -1 : n;
+        return n;
     }
 
     // Version verbeuse - à simplifier
     public static boolean estPair(int n) {
         int reste = n % 2;
-        if (reste == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return reste == 0 ? true : false;
     }
 
     // Version verbeuse - à simplifier
     public static int max(int a, int b) {
-        int resultat;
-        if (a > b) {
-            resultat = a;
-        } else {
-            resultat = b;
-        }
-        return resultat;
+        return a > b ? a : b;
     }
 
     // Version verbeuse - à simplifier
     public static String signe(int n) {
-        String resultat;
-        if (n > 0) {
-            resultat = "positif";
-        } else {
-            if (n < 0) {
-                resultat = "negatif";
-            } else {
-                resultat = "zero";
-            }
-        }
-        return resultat;
+        return n > 0 ? "positif" : n < 0 ? "négatif" : "zero";
     }
 }
