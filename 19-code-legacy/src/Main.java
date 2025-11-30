@@ -19,8 +19,7 @@ public class Main {
         System.out.println("\n=== Valeur totale ===");
         System.out.println("Valeur : " + inv.valeurTotale() + " euros");
 
-        // TODO: Ajouter ici l'appel à la nouvelle fonctionnalité
-        // System.out.println("\n=== Produits chers (>2 euros) ===");
-        // inv.afficherCher(2.0);
+        System.out.println("\n=== Produits chers (>2 euros) ===");
+        inv.afficherCher(2.0);
     }
 }
