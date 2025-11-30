@@ -3,25 +3,28 @@
 ## Partie 1 : Références (Liste chaînée)
 
 **Schéma mémoire après lignes 11-12 :**
+
 ```
-a ──→ [Noeud: valeur=___, suivant=___]
+a ──→ [Noeud: valeur=1, suivant=b]
               │
               ▼
-b ──→ [Noeud: valeur=___, suivant=___]
+b ──→ [Noeud: valeur=2, suivant=c]
               │
               ▼
-c ──→ [Noeud: valeur=___, suivant=___]
+c ──→ [Noeud: valeur=3, suivant=null]
 ```
 
 **Traçage de la boucle while :**
-- Tour 1 : courant = ___, affiche ___, courant devient ___
-- Tour 2 : courant = ___, affiche ___, courant devient ___
-- Tour 3 : courant = ___, affiche ___, courant devient ___
-- Sortie : courant = ___, condition fausse
+
+- Tour 1 : courant = a, affiche 1, courant devient b
+- Tour 2 : courant = b, affiche 2, courant devient c
+- Tour 3 : courant = c, affiche 3, courant devient null
+- Sortie : courant = null, condition fausse
 
 **Affichage :**
-```
 
+```
+1 -> 2 -> 3 -> null
 ```
 
 ---
@@ -29,6 +32,7 @@ c ──→ [Noeud: valeur=___, suivant=___]
 ## Partie 2 : Récursion
 
 **Pile d'appels :**
+
 ```
 sommeRecursive(a) : 1 + sommeRecursive(b)
   sommeRecursive(b) : 2 + sommeRecursive(c)
@@ -37,30 +41,44 @@ sommeRecursive(a) : 1 + sommeRecursive(b)
 ```
 
 **Dépilage :**
-- sommeRecursive(null) retourne ___
-- sommeRecursive(c) retourne ___ + ___ = ___
-- sommeRecursive(b) retourne ___ + ___ = ___
-- sommeRecursive(a) retourne ___ + ___ = ___
 
-**Résultat :** ___
+- sommeRecursive(null) retourne 0
+- sommeRecursive(c) retourne 0 + 3 = 3
+- sommeRecursive(b) retourne 3 + 2 = 5
+- sommeRecursive(a) retourne 5 + 1 = 6
+
+**Résultat :** 6
 
 ---
 
 ## Partie 3 : Bug à trouver
 
 **Que fait la fonction `compterOccurrences` ?**
-___
+Elle compte le nombre de fois qu'une valeur est présente dans un tableau
+
+---
 
 **Quel est le bug ?**
-- Ligne problématique : ___
-- Description : ___
 
-**Résultat actuel :** ___
-**Résultat attendu :** ___
+- Ligne problématique : ligne 56 : break;
+- Description : dès qu'une occurence est trouvée, arrête la boucle for
+
+**Résultat actuel :** 1
+**Résultat attendu :** 3
 
 **Correction proposée :**
+
 ```java
 
+    public static int compterOccurrences(int[] t, int val) {
+        int count = 0;
+        for (int i = 0; i < t.length; i++) {
+            if (t[i] == val) {
+                count++;
+            }
+        }
+        return count;
+    }
 ```
 
 ---
@@ -68,12 +86,14 @@ ___
 ## Partie 4 : Architecture
 
 **Après les 3 `ajouter()` :**
-- elements = [___, ___, ___, ...]
-- taille = ___
 
-**somme() :** ___ + ___ + ___ = ___
+- elements = [10, 20, 30, ...]
+- taille = 3
+
+**somme() :** 10 + 20 + 30 = 60
 
 **Après doubler() :**
-- elements = [___, ___, ___, ...]
 
-**somme() :** ___ + ___ + ___ = ___
+- elements = [20, 40, 60, ...]
+
+**somme() :** 20 + 40 + 60 = 120
