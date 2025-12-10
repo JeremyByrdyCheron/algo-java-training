@@ -50,7 +50,7 @@
 
 **Que fait cette fonction ?**
 
-- Double boucle imbriquée → \_\_\_
+- Double boucle imbriquée → parcourt le tableau pour comparer et échanger les éléments si nécessaire.
 - Compare t[j] et t[j+1], échange si t[j] > t[j+1] →
 
 **En une phrase, cette fonction :** classe dans l'ordre croissant les nombres d'un tableau
